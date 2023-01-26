@@ -4,7 +4,30 @@
 
 This markdown file contains all the programming knowledge I have learnt from taking the ICS4U0 course. Code examples are all from my past assignments or personal projects and have been included to better elucidate concepts. The bulk of examples are written in C++ and as such, this portfolio will mainly center around this language.
 
-TODO
+- [Documentation](#documentation)
+  * [Class Documentation](#class-documentation)
+  * [Extending Objects Documentation](#extending-objects-documentation)
+  * [UML Class Diagrams](#uml-class-diagrams)
+- [Object-Oriented Programming](#object-oriented-programming)
+  * [Objects and Encapsulation](#objects-and-encapsulation)
+  * [Classes, Constructors, Deconstructors](#classes--constructors--deconstructors)
+  * [Inheritance, Access Modifiers, Polymorphism](#inheritance--access-modifiers--polymorphism)
+  * [Abstract Classes and Interfaces](#abstract-classes-and-interfaces)
+- [Algorithmic Thinking](#algorithmic-thinking)
+  * [Sorting Algorithm](#sorting-algorithm)
+    + [Insertion Sort](#insertion-sort)
+    + [Bubble Sort](#bubble-sort)
+    + [Comparison to Other Sorting Algorithms](#comparison-to-other-sorting-algorithms)
+  * [Searching Algorithms](#searching-algorithms)
+    + [Linear Search](#linear-search)
+    + [Binary Search](#binary-search)
+    + [Comparison to Other Searching Algorithms](#comparison-to-other-searching-algorithms)
+  * [Recursion](#recursion)
+    + [Recursive Algorithms](#recursive-algorithms)
+    + [Recursion Types and Pitfalls](#recursion-types-and-pitfalls)
+- [File Handling](#file-handling)
+  * [File Reading](#file-reading)
+  * [File Writing](#file-writing)
 
 ---
 
@@ -109,7 +132,7 @@ public:
 
 > To learn more about inheritance, please see: [Inheritance, Access Modifiers, Polymorphism](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#inheritance-access-modifiers-polymorphism)
 
-> To learn more about abstraction/virtualization, please see: [Abstract Classes + Interfaces](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#abstract-classes--interfaces)
+> To learn more about abstraction/virtualization, please see: [Abstract Classes + Interfaces](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#abstract-classes-and-interfaces)
 
 ### UML Class Diagrams
 
@@ -132,7 +155,7 @@ Unified Modeling Language (UML) Class Diagrams are a crucial tool in planning ou
 
 Object-oriented programming (OOP) is a programming paradigm based on the idea of storing and organizing data into "Objects". It involves several concepts including but not limited to Encapsulation, Classes, Inheritance, Polymorphism, Abstraction/Virtualization, and Interfaces--these will all be explained below...
 
-### Objects + Encapsulation 
+### Objects and Encapsulation 
 
 Objects are individualized units of code that can store data members as "attributes" and perform reusable functions called "methods". Objects can be customized infinitely in theory and brings flexibility, structure, and reusability to code.
 
@@ -217,7 +240,7 @@ public:
 
 A big feature when it comes to Inheritance is Polymorphism. Briefly explained, Polymorphism is the idea of treating classes like their parent classes. As an example from the code above, if there was a function that took in an Entity object as a parameter, I could pass in a Person object instead due to polymorphism.
 
-### Abstract Classes + Interfaces
+### Abstract Classes and Interfaces
 
 Abstract classes differ from regular classes given that they cannot be instantiated but only inherited from. This is because abstract classes contain abstract/virtual methods---methods that must be overwritten by a child class (i.e. given its own unique function body for every child class). Nonetheless, abstract classes can still contain some functional methods. Overall though, they are used to group functionality among classes and better layout a program's class hierarchy.
 
@@ -471,7 +494,7 @@ To see an example of a recursive searching algorithm, please see: [Binary Search
 
 To see an example of a recursive sorting algorithm, please see: [Bubble Sort](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#bubble-sort).
 
-#### Recursion Types + Pitfalls
+#### Recursion Types and Pitfalls
 
 Recursion can be broadly classified as either direct recursion or indirect recursion. Direct recursion means that only one function is calling itself in its own body, whereas indirect recursion means you have multiple functions calling each other in a cycle.
 
