@@ -116,7 +116,7 @@ public:
 Unified Modeling Language (UML) Class Diagrams are a crucial tool in planning out object-oriented programs. Before you start writing code, they allow you to fully organize and lay out ideas about your classes and their functionalities, alongside brainstorm how they should relate to one another such as with composition relationships, inheritance, data shared with access modifiers, or interface implementation. This massively helps save time and energy when developing and debugging classes through giving you a big picture understanding of your program while coding, which is especially useful in low level languages like C++ where classes must be defined in a particular order for the program to run.
 
 *Nuanced UML Class Diagram Example:*
-![EDS UML Class Diagram](TODO)
+![EDS UML Class Diagram](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio/blob/master/EDS%20UML%20Class%20Diagram%20-%20CS.G12S1%20-%20By%20Faizaan%20Aslam_page-0001.jpg)
 
 * Each class is represented as a rectangle divided into 3 portions:
   * The first portion at the top is the class name.
