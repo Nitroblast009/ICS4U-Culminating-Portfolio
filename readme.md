@@ -14,7 +14,7 @@ This markdown file contains all the programming knowledge I have learnt from tak
   * [Inheritance, Access Modifiers, Polymorphism](#inheritance--access-modifiers--polymorphism)
   * [Abstract Classes and Interfaces](#abstract-classes-and-interfaces)
 - [Algorithmic Thinking](#algorithmic-thinking)
-  * [Sorting Algorithm](#sorting-algorithm)
+  * [Sorting Algorithms](#sorting-algorithms)
     + [Insertion Sort](#insertion-sort)
     + [Bubble Sort](#bubble-sort)
     + [Comparison to Other Sorting Algorithms](#comparison-to-other-sorting-algorithms)
@@ -126,9 +126,9 @@ public:
 
 1. For the most part, the description for a child class is mainly the same. The one key addition to note is that it is stated which other class this class inherits from and which type of inheritance specifically--either public, private, or protected. Some general similarities between the parent and child class are also noted here.
 
-2. Again the constructor is mostly the same, however this time, it is noted that that the constructor actually being utilized to instantiate this class is its parent class' constructor.
+2. Again the constructor's documentation is mostly the same, however this time, it is noted that that the constructor actually being utilized to instantiate this class is its parent class' constructor.
 
-3. Methods in descendent classes should be described with the same documentation standards as before. However, if they are overriding a parent's method or an abstract method, it should be noted as well as the changes in functionality if applicable.
+3. Methods in derived classes should be described with the same documentation standards as before. However, if they are overriding a parent's method or an abstract method, it should be noted as well as the changes in functionality if applicable.
 
 > To learn more about inheritance, please see: [Inheritance, Access Modifiers, Polymorphism](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#inheritance-access-modifiers-polymorphism)
 
@@ -190,15 +190,15 @@ public:.
 
 1. This line creates two integer attributes for this class. These attributes (i.e. variables) can be used throughout the class and, when instantiated, each specific object has its own copy of these attributes.
 
-2. This is the class' constructor, a special method (i.e. function) that is called when first instantiating this class as an object. Parameters can be specified in the brackets when instantiating a class, so that the attributes of each created object can be unique with their own values.
+2. This is the class' constructor, a special method (i.e. function) that is called when first instantiating this class as an object. Parameters can be specified in the brackets when instantiating a class, so that the attributes of each created object can be unique and start off with different values.
 
-3. This is one of the class' methods. They are just like regular functions with the exception that they belong to a specific object and can be used to modify the object if desired. Object attributes can be accessed inside methods using the prefix "this->".
+3. This is one of the class' methods. Methods are just like regular functions with the exception that they belong to a specific object and can be used to modify the object if desired. Object attributes can be accessed inside methods using the prefix `this->`.
 
 4. This is the class' deconstructor, a special method like the constructor that is called when an object made from this class is discarded from memory. They are most useful when it comes to memory garbage collection, as languages like C++ require it to be done manually.
 
 ### Inheritance, Access Modifiers, Polymorphism
 
-Extending from the idea of classes, we have Inheritance. In simple words, Inheritance lets a "child" class copy attributes and methods from its "parent" class. In general, Inheritance helps you create a hierarchy of classes in your program, which really helps keep object data organized and increases code reusability. Extending on this, you can specify which attributes and methods can be passed down or generally accessible via Access Modifiers. A simple example of inheritance between an Entity class and Person class with usage of Access Modifiers is demonstrated below...
+Extending from the idea of classes, we have inheritance. In simple words, Inheritance lets a "child" class copy attributes and methods from its "parent" class. Looking at the bigger picture, inheritance helps you create a hierarchy of classes in your program, which really helps keep object data organized and increases code reusability. Extending on this, you can specify which attributes and methods can be passed down or generally accessible via Access Modifiers. A simple example of inheritance between an Entity class and Person class with usage of Access Modifiers is demonstrated below...
 
 ```c++
 class Entity
@@ -234,11 +234,11 @@ public:
 
 2. In the Entity class, the boolean attribute named isAlive, the two integers, and the class' constructor are marked as "Public" using an Access Modifier. This means that they can all be accessed/called by external code or by child classes.
 
-3. In the Entity class, the void function named die() is marked as "Protected" using an Access Modifier. This means that only methods within the Entity class or within its descendent classes can call this function.
+3. In the Entity class, the void function named die() is marked as "Protected" using an Access Modifier. This means that only methods within the Entity class or within its derived classes can call this function.
 
 4. The syntax for inheritance is "ChildClass : ParentClass" and there are three types of inheritance: public, private, and protected (not to be confused with Access Modifiers). Of the three, public inheritance is most commonly used and simply takes attributes/methods from its parent class as dictated by the parent class' Access Modifiers. As a result, the Person class now contains a public boolean variable, two public integer variables, and one protected void die() function copied from the Entity class, along with its own public std::string and void move() function.
 
-A big feature when it comes to Inheritance is Polymorphism. Briefly explained, Polymorphism is the idea of treating classes like their parent classes. As an example from the code above, if there was a function that took in an Entity object as a parameter, I could pass in a Person object instead due to polymorphism.
+A big feature when it comes to inheritance is polymorphism. Briefly explained, polymorphism is the concept of treating child classes like their parent classes. As an example from the code above, if there were a function that took in an Entity object as a parameter, I could pass in a Person object instead due to polymorphism.
 
 ### Abstract Classes and Interfaces
 
@@ -286,22 +286,22 @@ Note that `virtual void function() = 0;` signifies that the function is a pure a
 
 ## Algorithmic Thinking
 
-Programming algorithms are a big part of data science and are, in essence, a procedure or formula used to solve a problem. 
+Algorithms are a big part of data science and are, in essence, a procedure or formula used to solve a problem. 
 
 Besides objects, a common way to group data is via an array. An array is simply a list of elements, where each element contains its own data and has a specific index (i.e. position) in the array. Because of their widespread use, there are a multitude of algorithms that can sort arrays and search for elements in them.
 
-Each algorithm is measured and compared with one another primarily based on its average time complexity and space complexity. Both of these are indicated using Big-O notation, which outlines the mathematical trend of each complexity as the number of items in the array increases. Attached below is a graph with illustrations of common complexities with their respective Big-O notations indicated, where ``n`` represents the input size of the array...
+Each algorithm is measured and compared with one another primarily based on its average time complexity and space complexity. Both of these are indicated using Big-O notation, which outlines the mathematical trend of each complexity as the number of items in the array increases. Attached below is a graph containing illustrations of common complexities with their respective Big-O notations indicated, where ``n`` represents the input size of the array...
 
 ![Big O Notation Graph](https://miro.medium.com/max/1400/1*FkQzWqqIMlAHZ_xNrEPKeA.png)
 > Credit: https://miro.medium.com/max/1400/1*FkQzWqqIMlAHZ_xNrEPKeA.png
 
-The time complexity is what the trend will look like for how long a specific algorithm will take on average for sorting/searching an array with ``n`` amount of items. For instance, if an algorithm has a linear time complexity (denoted as ``O(n)``) that means that the amount of time the algorithm takes will increase linearly as ``n`` increases (shown in blue on the above graph). On the other hand, if an algorithm has a logarithmic time complexity (``O(log(n))``), the amount of time the algorithm takes will increase but as a continuously slower rate as ``n`` increases (shown in yellow).
+The time complexity is what the trend for how long a specific algorithm will take looks like on average for sorting/searching an array with ``n`` amount of items. For instance, if an algorithm has a linear time complexity (denoted as ``O(n)``) that means that the amount of time the algorithm takes will increase linearly as ``n`` increases (shown in blue on the above graph). On the other hand, if an algorithm has a logarithmic time complexity (``O(log(n))``), the amount of time the algorithm takes will increase but at a continuously slower rate as ``n`` increases (shown in yellow).
 
-Likewise, the space complexity outlines the trend for how much space it will take a computer to run the algorithm on average as ``n`` increases and uses the same Big-O notation. Some common space complexities denoted by Big-O notation include constant space (``O(1)``), meaning as ``n`` increases the amount of space needed stays the same (shown in green), and quadratic space, meaning the space needed will increase exponentially as ``n`` increases (shown in red).
+Likewise, the space complexity outlines the trend for how much space in memory it will take a computer to run the algorithm on average as ``n`` increases and uses the same Big-O notation. Some common space complexities denoted by Big-O notation include constant space (``O(1)``), meaning as ``n`` increases the amount of space needed stays the same (shown in green), and quadratic space, meaning the space needed will increase exponentially as ``n`` increases (shown in red).
 
-### Sorting Algorithm
+### Sorting Algorithms
 
-As the name implies, sorting algorithms are used to sort elements in an array in accordance to a specific criteria. The simplest example is sorting an array of numbers from least to greatest, and will be the sorting criteria used for all the following code examples...
+As the name implies, sorting algorithms are used to sort elements in an array in accordance to specific criteria. The simplest example is sorting an array of numbers from least to greatest, and will be the sorting criteria used for all the following code examples...
 
 #### Insertion Sort
 
@@ -354,7 +354,7 @@ void bubbleSort(int arr[], int n)
 
 *Implementation Walk-through:*
 
-1. The bubble sort function is initially called with the full array to be sorted along with its full size as parameters. The algorithm then moves through the entire array while checking each pair of elements and swapping them if the element with index ``i + 1`` is less than the element with index ``i``. This in essence brings the largest item of the array to the end.
+1. The bubble sort function is initially called with the full array to be sorted along with its full size as parameters. The algorithm then moves through the entire array while checking each pair of elements and swapping them if the element with index ``i + 1`` is less than the element with index ``i``. This effectively brings the largest item of the array to the end.
 2. The recursive function is called again, this time with the last item removed from the list (as it has already been sorted) and the size reduced by 1. The algorithm then brings the next largest item to the end of the list, and the cycle continues to repeat itself.
 3. Steps 1 and 2 are repeated ``n`` times and the recursive function eventually stops once ``n = 1``, signifying that the whole array has been sorted!
 
@@ -372,11 +372,11 @@ void bubbleSort(int arr[], int n)
 | Heap Sort      | O(n * log(n))           | O(1)                     |
 | Shell Sort     | O((n * log(n))^2)       | O(1)                     |
 
-Looking in terms of just complexities, it seems that quick, merge, and heap sort are the fastest compared to the rest. However, after running my own experiments and doing research, I have come to know that quick sort is fastest for smaller or medium-sized arrays, merge sort is fastest for larger arrays and linked lists, and heap sort is the slowest overall due to the amount of extra computations it needs to do even with the same time complexity as the others. Despite that, when focusing on space complexity, heap sort shines the most due to it being an in-place sorting algorithm and being more time efficient compared to bubble, insertion, or shell sort.
+Looking in terms of just complexities, it seems that quick, merge, and heap sort are the fastest compared to the rest. However, after running my own experiments and doing research, I have come to know that quick sort is fastest for smaller or medium-sized arrays, merge sort is fastest for larger arrays and linked lists, and heap sort is the slowest overall due to the amount of extra computations it needs to do even with the same time complexity as the others. Despite that, when focusing on space complexity, heap sort shines the most due to it being an in-place sorting algorithm requiring a constant amount of space (if done iteratively) and being more time efficient compared to bubble, insertion, and shell sort.
 
 ### Searching Algorithms
 
-Searching algorithms have a variety of use cases, not only for arrays but other data types as well such as in linked lists. However, one of the most common uses of searching algorithms is to find a specific value in a numeric array, which will be the goal of the following code examples...
+Searching algorithms have a variety of use cases, not only for arrays but other data structures as well such as linked lists and dynamic vectors. However, one of the most common uses of searching algorithms is to find a specific value in a numeric array, which will be the purpose of the following code examples...
 
 #### Linear Search
 
@@ -412,18 +412,18 @@ int linearSearch(std::vector<int> &list, int target)
 
 *Recursive Code Implementation:*
 ```c++
-inline int binarySearch(std::vector<int> &arr, int l, int r, int x)
+inline int binarySearch(std::vector<int> &arr, int t, int l, int r)
 {
     if (r >= l)
     {
         int mid = l + (r - l) / 2;
-        if (arr[mid] == x)
+        if (arr[mid] == t)
             return mid;
 
-        if (arr[mid] > x)
-            return binarySearch(arr, l, mid - 1, x);
+        if (arr[mid] > t)
+            return binarySearch(arr, t, l, mid - 1);
 
-        return binarySearch(arr, mid + 1, r, x);
+        return binarySearch(arr, t, mid + 1, r);
     }
 
     return -1;
@@ -432,12 +432,12 @@ inline int binarySearch(std::vector<int> &arr, int l, int r, int x)
 
 *Implementation Walk-through:*
 
-1. When the binary search function is initially called, the full array and the target value `x` are passed in as parameters. The `l` and `r` variables signify the left and right ends, inclusive, of the range the algorithm should search in; on the initial call, they are `0` and `n - 1` respectively
+1. When the binary search function is initially called, the full array and the target value `t` are passed in as parameters. The `l` and `r` variables signify the left and right ends, inclusive, of the range the algorithm should search in; on the initial call, they are `0` and `n - 1` respectively
 2. For each call, the index of the midpoint of the array is found. Three possible things can happen next: 
    1. If the midpoint is the target value, its index is returned throughout all the recursive calls and the algorithm is finished. Otherwise the next comparison is made.
-   2. If the midpoint is greater than the target value, a new recursive call is made with array and target value passed in again, but this time the right end of the array is just before the midpoint and the left end of the array stays the same, effectively narrowing the search range by half. Otherwise the next comparison happens.
-   3. If the midpoint is less than the target value, a new recursive call is made with array and target value passed in again, but this time the left end of the array is just after the midpoint and the right end of the array stays the same, effectively narrowing the search range by half.
-3. Step 2 will continue to repeat until the midpoint is found and returned, or until the last function call is made with no searching range left (i.e. the right end is less than the left end). If the latter is true, then `-1` will be returned, signifying that the target value could not be found.
+   2. If the midpoint is greater than the target value, a new recursive call is made with the array and target value passed in again, but this time the right end of the array is set just before the midpoint and the left end of the array stays the same, effectively narrowing the search range by half. Otherwise the next comparison happens.
+   3. If the midpoint is less than the target value, a new recursive call is made with the array and target value passed in again, but this time the left end of the array is set just after the midpoint and the right end of the array stays the same, effectively narrowing the search range by half.
+3. Step 2 will continue to repeat until the target value is found as a midpoint and returned, or until the last function call is made with no searching range left (i.e. the right end is less than the left end). If the latter is true, then `-1` will be returned, signifying that the target value could not be found.
 
 > To learn more about recursive functions, please see: [Recursion](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#recursion)
 
@@ -451,13 +451,13 @@ inline int binarySearch(std::vector<int> &arr, int l, int r, int x)
 | Exponential Search | O(log(n))               | O(1)                     |
 | Sequential Search  | O(n)                    | O(1)                     |
 
-Looking at the chart, it can be seen that in terms of time efficiency binary and exponential search stand out the most with their `O(log(n))` time complexities, with jump search following suit with its `O(√n)` time complexity. The key difference between binary and exponential search, however, is that exponential search is explicitly designed for unbounded lits where as binary search is for bounded arrays. As for space complexities, all these algorithms are the same for the most part as they all take constant space to run. Lastly, linear search stands out because it does not require the array to be sorted; this could save computational time and resources from being used to first sort the array in order to search in it.
+Looking at the chart, it can be seen that in terms of time efficiency binary and exponential search stand out the most with their `O(log(n))` time complexities, with jump search following suit with its `O(√n)` time complexity. The key difference between binary and exponential search, however, is that exponential search is explicitly designed for unbounded lists whereas binary search is for bounded arrays. As for space complexities, all these algorithms are the same for the most part as they all take constant space to run. Lastly, linear search stands out because it does not require the array to be sorted; this could save computational time and resources from being used to first sort the array in order to search in it.
 
 ### Recursion
 
-Recursion in broad terms means defining a problem in terms of itself and is a really powerful tool for writing algorithms, as demonstrated above. 
+Recursion in a broad sense means defining a problem in terms of itself and is a really powerful tool for writing algorithms, as demonstrated above. 
 
-A recursive function is a function that calls itself with its own body, and continues to do so until a stopping condition is reached in the last call. A recursive function can be used as a recursive loop, which is in direct contrast to an iterative loop made using `while` and/or `for` loops. To illustrate the difference, the following function prints the numbers 1 through 5 iteratively and the function after that does the same but recursively.
+A recursive function is a function that calls itself within its own body, and continues to do so until a stopping condition is reached in the last call. A recursive function can be used as a recursive loop, which is in direct contrast to an iterative loop made using `while` and/or `for` loops. To illustrate the difference, the following function prints the numbers 1 through 5 iteratively and the function after that does the same but recursively.
 
 ```c++
 void printNumbersIteratively() {
@@ -496,19 +496,19 @@ To see an example of a recursive sorting algorithm, please see: [Bubble Sort](ht
 
 #### Recursion Types and Pitfalls
 
-Recursion can be broadly classified as either direct recursion or indirect recursion. Direct recursion means that only one function is calling itself in its own body, whereas indirect recursion means you have multiple functions calling each other in a cycle.
+Recursion can be generally classified as either direct or indirect recursion. Direct recursion means that only one function is calling itself in its own body, whereas indirect recursion means you have multiple functions calling each other in a cycle.
 
-The three major types of direct recursion are tail recursion (time complexity `O(n)`, space complexity `O(1)`), where the recursive call is made at the very end of the function body; head recursion (time complexity `O(n)`, space complexity `O(n)`), where the recursive call is made at the very beginning of the function body; and tree recursion (time complexity `O(2^n)`, space complexity `O(n)`), where the function call is made multiple times throughout the body. A very common pitfall faced when using direct recursion is stack overflowing, which is when the computer does not have any new memory to use for new function calls. This however can be avoided by using tail recursion, as the function is only called again once the main body has been executed.
+The three major types of direct recursion are tail recursion (time complexity `O(n)`, space complexity `O(1)`), where the recursive call is made at the very end of the function body; head recursion (time complexity `O(n)`, space complexity `O(n)`), where the recursive call is made at the very beginning of the function body; and tree recursion (time complexity `O(2^n)`, space complexity `O(n)`), where the function call is made multiple times throughout the body. A very common pitfall faced when using direct recursion is stack overflowing, which is when the computer does not have any more memory to use for new function calls. This however can be avoided by using tail recursion, as the function is only called again once the main body has been executed--this is why it has a space complexity of `O(1)`.
 
-Another huge pitfalls many new programmers face when it comes to using recursion is being able to write a recursive function with succinct stopping logic that works properly the first time it's called, as well as the *n*th time. Given how the code's logic and flow is not spelt out like with an iterative approach, it is hard to internalize the logic behind a recursive approach. As such, I believe it is important to first solidify your program's logic using a flow chart before you start to code a recursive algorithm or function.
+Another huge pitfall many new programmers face when it comes to using recursion is being able to write a recursive function with concise stopping logic that works properly the first time it is called, as well as the *n*th time. Given how the code's logic and flow is not spelt out like with an iterative approach, it is hard to internalize the logic behind a recursive procedure. As such, I believe it is important to first solidify your program's logic using a flow chart before you start to code a recursive algorithm or function.
 
 ---
 
 ## File Handling
 
-File handling is essential when it comes to storing and manipulating data that exists beyond just a runtime environment. There is a myriad of ways data can be stored including text, binary, CSV, JSON, and SQL Database files. Some file types are more useful for inputting data into programs (i.e. reading from files), whereas others are better with outputting data from programs (i.e. writing to files).
+File handling is essential when it comes to storing and manipulating data that exists beyond just a runtime environment. There is a myriad of ways data can be stored including text, binary, CSV, JSON, and SQL Database files. Some file types are more useful for inputting data into programs (i.e. reading from files), while others are better with outputting data from programs (i.e. writing to files).
 
-Whether you read or write to a file, it is always important to close it at the end of your program. This is accomplished in C++ with the built-in `.close()` method on both `ifstream` objects (for input files) and `ofstream` objects (for output files).
+Whether you read or write to a file, it is always important to close it at the end of your program to avoid corrupting data. This is accomplished in C++ with the built-in `.close()` method on both `ifstream` objects (for input files) and `ofstream` objects (for output files).
 
 ### File Reading
 
@@ -555,7 +555,7 @@ Below is a JSON file I used to store my data in an organized schema to be inputt
 }
 ```
 
-To read it in my program, I created an `ifstream` object and used it to open this JSON file with a relative path, which comes courtesy of C++ standard library for reading/writing to files, `<fstream>`. Next, instead of reinventing the wheel, I used the help of *Nlohmann's JSON for Modern C++ API* to convert the input JSON schema into object format for convenient data access.
+To read it in my program, I created an `ifstream` object and used it to open this JSON file with a relative path, which comes courtesy of the C++ standard library for reading/writing to files, `<fstream>`. Next, instead of reinventing the wheel, I used the help of *Nlohmann's JSON for Modern C++ API* to convert the input JSON schema into an object format for convenient data access.
 
 ```c++
 std::ifstream inputFile;
@@ -565,7 +565,7 @@ nlohmann::json pencilCase = nlohmann::json::parse(inputFile);
 
 ### File Writing
 
-For my Data Structures assignment, I just chose to write to an external text file. I first created an `ofstream` object with a relative path to write to it, and used the built-in insertion operator to write data to it.
+For my Data Structures assignment, I just chose to write to an external text file. I first created an `ofstream` object with a relative path to write to it, and used the built-in insertion operator to send my data.
 
 ```c++
 std::ofstream paper;
