@@ -66,7 +66,7 @@ public:
    
 3. Each method in a class should have a detailed description of what its use is. Much like with the constructor documentation, it should also list each parameter used with an @param tag in front, the parameter name, the parameter type, and  the single-line parameter description at the end. Additionally, should the return type  be non-void, the meaning behind the value returned and its datatype should be stated with a @returns tag.
 
-> To learn more about classes, please see: [Classes, Constructors, Deconstructors](TODO)
+> To learn more about classes, please see: [Classes, Constructors, Deconstructors](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#classes-constructors-deconstructors)
 
 
 ### Extending Objects Documentation
@@ -107,9 +107,9 @@ public:
 
 3. Methods in descendent classes should be described with the same documentation standards as before. However, if they are overriding a parent's method or an abstract method, it should be noted as well as the changes in functionality if applicable.
 
-> To learn more about inheritance, please see: [Inheritance, Access Modifiers, Polymorphism](TODO)
+> To learn more about inheritance, please see: [Inheritance, Access Modifiers, Polymorphism](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#inheritance-access-modifiers-polymorphism)
 
-> To learn more about abstraction/virtualization, please see: [Abstract Classes + Interfaces](TODO)
+> To learn more about abstraction/virtualization, please see: [Abstract Classes + Interfaces](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#abstract-classes--interfaces)
 
 ### UML Class Diagrams
 
@@ -123,7 +123,7 @@ Unified Modeling Language (UML) Class Diagrams are a crucial tool in planning ou
     * Abstract classes are marked with an italicized title, whereas interfaces simply have `<<interface>>` written above.
   * The middle portion contains the class' attributes and their data types.
   * The end portion contains the class' methods and their return types as well as parameters with data types.
-* In front of each attribute and method is either a `+`, `-`, or `#` sign. `+` means that the attribute/method is public, `-` means that it is private, and `#` means that it is protected. To learn more about the difference between these, please see: [Inheritance, Access Modifiers, Polymorphism](TODO).
+* In front of each attribute and method is either a `+`, `-`, or `#` sign. `+` means that the attribute/method is public, `-` means that it is private, and `#` means that it is protected. To learn more about the difference between these, please see: [Inheritance, Access Modifiers, Polymorphism](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#inheritance-access-modifiers-polymorphism).
 * **Black Diamonds** illustrate composite relationships where the class with the diamond beneath it uses the class on the other end in its attributes and/or methods. It is indicated on the other end how many times the class is used, with `1` meaning once, `1..*` meaning at least once, and `1..n` meaning between 1 to *n* times. `1` could be replaced with any other positive integer.
 * **White Triangles** indicate inheritance between classes. Specifically, the class with the triangle beneath it is the parent class and the class on the other end is the child class. This same symbol is used for classes that implement interfaces as well as classes that inherit from abstract classes.
 ---
@@ -335,7 +335,7 @@ void bubbleSort(int arr[], int n)
 2. The recursive function is called again, this time with the last item removed from the list (as it has already been sorted) and the size reduced by 1. The algorithm then brings the next largest item to the end of the list, and the cycle continues to repeat itself.
 3. Steps 1 and 2 are repeated ``n`` times and the recursive function eventually stops once ``n = 1``, signifying that the whole array has been sorted!
 
-> To learn more about recursive functions, please see: [Recursion](TODO)
+> To learn more about recursive functions, please see: [Recursion](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#recursion)
 
 #### Comparison to Other Sorting Algorithms
 
@@ -416,7 +416,7 @@ inline int binarySearch(std::vector<int> &arr, int l, int r, int x)
    3. If the midpoint is less than the target value, a new recursive call is made with array and target value passed in again, but this time the left end of the array is just after the midpoint and the right end of the array stays the same, effectively narrowing the search range by half.
 3. Step 2 will continue to repeat until the midpoint is found and returned, or until the last function call is made with no searching range left (i.e. the right end is less than the left end). If the latter is true, then `-1` will be returned, signifying that the target value could not be found.
 
-> To learn more about recursive functions, please see: [Recursion](TODO)
+> To learn more about recursive functions, please see: [Recursion](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#recursion)
 
 #### Comparison to Other Searching Algorithms
 
@@ -467,9 +467,9 @@ int reverseLucasSequence(int n, var memoizationTable) {
 ```
 Having a memoization table saves computational time and resources, as it prevents tree-recursive functions, such as the above, from having to recalculate the same values over multiple function calls.
 
-To see an example of a recursive searching algorithm, please see: [Binary Search](TODO).
+To see an example of a recursive searching algorithm, please see: [Binary Search](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#binary-search).
 
-To see an example of a recursive sorting algorithm, please see: [Bubble Sort](TODO).
+To see an example of a recursive sorting algorithm, please see: [Bubble Sort](https://github.com/Nitroblast009/ICS4U-Culminating-Portfolio#bubble-sort).
 
 #### Recursion Types + Pitfalls
 
